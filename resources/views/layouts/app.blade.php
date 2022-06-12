@@ -39,9 +39,13 @@
 <body >
 
 <nav style="background-color: #9a86a4" class="flex py-2 bg-indigo-500 text-white">
+    <div class="w-1/2 px-2 py-3 mr-auto">
+        <a href="{{route('readEmpleado')}}"  class="font-semibold border-3 border-white
+              hover:bg-purple-300 py-2 px-3 rounded-md text-white "><i class="fas fa-user-friends"></i> Registro de empleados por usuario</a>
+
+    </div>
 
     <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
-
         @if(auth()->check())
             <li>
             <li class="mx-6">

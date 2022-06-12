@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmpleadosController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SesionController;
@@ -20,7 +21,7 @@ Route::get('/Create/empleados', [EmpleadosController::class, 'create'])->name('c
 Route::post('/Create/Save', [EmpleadosController::class, 'save'])->name('save');
 
 //CRUD
-Route::get('/read/Vista',  [EmpleadosController::class, 'read'])->name('read')->middleware('auth');;
+Route::get('/read/Vista',  [EmpleadosController::class, 'read'])->name('read')->middleware('auth');
 
 //actualizar
 Route::get('/edit/{empleados}',  [EmpleadosController::class, 'edit'])->name('edit');
@@ -28,3 +29,6 @@ Route::patch('/actualizar/{empleado}',[EmpleadosController::class, 'update'])->n
 
 //ruta eliminar
 Route::delete('delete/{empleado}', [EmpleadosController::class,'delete'])->name('delete');
+
+//ruta para visualizar el registro de empleados por usuario
+Route::get('/read',  [UsuarioController::class, 'readEmpleado'])->name('readEmpleado')->middleware('auth');;
