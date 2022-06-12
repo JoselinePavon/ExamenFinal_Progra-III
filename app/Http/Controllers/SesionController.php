@@ -21,7 +21,7 @@ class SesionController extends Controller
             ]);
             return redirect()->back();
         }
-        return redirect()->route('home');
+        return redirect()->route('read');
 
     }
     public function destroy(){

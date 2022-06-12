@@ -36,12 +36,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
-<body style="background-color: #f1f0c0">
+<body >
 
 <nav style="background-color: #9a86a4" class="flex py-2 bg-indigo-500 text-white">
-    <div class="w-1/2 px-12 mr-auto">
-        <h2 class="text-2xl font-bold"> Registro de empleados</h2>
-    </div>
 
     <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
 
